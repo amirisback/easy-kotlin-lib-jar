@@ -1,5 +1,6 @@
 ## sample-kotlin-library
-Repository Sample For Native Kotlin Library
+Repository Sample For Native Kotlin Library <br>
+[![](https://jitpack.io/v/amirisback/sample-kotlin-library.svg?style=flat-square)](https://jitpack.io/#amirisback/sample-kotlin-library)
 
 Repository for testing build from jitpack.io
 - Red : Failed
