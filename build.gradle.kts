@@ -44,7 +44,7 @@ compose.desktop {
 group = "com.frogobox"
 
 /** Artifact version. Note that "SNAPSHOT" in the version is not supported by bintray. */
-version = "1.0.0"
+version = "1.0.1"
 
 /** This is from settings.gradle.kts. */
 val myArtifactId: String = rootProject.name
