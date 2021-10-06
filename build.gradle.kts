@@ -8,7 +8,6 @@ plugins {
     kotlin("jvm") version "1.5.21"
     id("org.jetbrains.compose") version "1.0.0-alpha3"
     id("maven-publish")
-    id("org.jetbrains.dokka") version "1.4.10.2"
 }
 
 repositories {
@@ -45,7 +44,7 @@ compose.desktop {
 group = "com.frogobox"
 
 /** Artifact version. Note that "SNAPSHOT" in the version is not supported by bintray. */
-version = "0.0.1"
+version = "1.0.0"
 
 /** This is from settings.gradle.kts. */
 val myArtifactId: String = rootProject.name
@@ -74,12 +73,6 @@ val sourcesJar by tasks.creating(Jar::class) {
     }
 }
 
-val dokkaJavadocJar by tasks.creating(Jar::class) {
-    dependsOn(tasks.dokkaJavadoc)
-    from(tasks.dokkaJavadoc.get().outputDirectory.get())
-    archiveClassifier.set("javadoc")
-}
-
 // More info on `publishing`:
 //   https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:resolved_dependencies
 // More info on authenticating with personal access token (myDeveloperId and myArtifactName must be lowercase):
@@ -95,7 +88,6 @@ publishing {
             from(components["java"])
 
             artifact(sourcesJar)
-            artifact(dokkaJavadocJar)
 
             pom {
                 packaging = "jar"

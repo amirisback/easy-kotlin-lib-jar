@@ -1,7 +1,6 @@
 ## sample-kotlin-library
 Repository Sample For Native Kotlin Library
 
-
 Repository for testing build from jitpack.io
 - Red : Failed
 - Green : Success / Pass
