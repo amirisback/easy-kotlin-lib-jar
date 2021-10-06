@@ -9,7 +9,7 @@ Repository for testing build from jitpack.io
 ## Version Release
 This Is Latest Release
 
-    $version_release = 1.0.1
+    $version_release = 1.0.2
 
 What's New??
 
@@ -31,7 +31,7 @@ What's New??
 ### Step 2. Add the dependency (build.gradle : Module)
 
     dependencies {
-        implementation 'com.github.amirisback:sample-kotlin-library:1.0.1'
+        implementation 'com.github.amirisback:sample-kotlin-library:1.0.2'
     }
 
 

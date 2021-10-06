@@ -4,47 +4,16 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     java
-    id("java-library")
     kotlin("jvm") version "1.5.21"
     id("org.jetbrains.compose") version "1.0.0-alpha3"
     id("maven-publish")
-}
-
-repositories {
-    google()
-    mavenCentral()
-    maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-}
-
-dependencies {
-    implementation(compose.desktop.currentOs)
-}
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
-}
-
-tasks.withType<KotlinCompile>() {
-    kotlinOptions.jvmTarget = JavaVersion.VERSION_11.toString()
-}
-
-compose.desktop {
-    application {
-        mainClass = "MainKt"
-        nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "sample-kotlin-library"
-            packageVersion = "1.0.0"
-        }
-    }
 }
 
 /** Artifact groupId. */
 group = "com.frogobox"
 
 /** Artifact version. Note that "SNAPSHOT" in the version is not supported by bintray. */
-version = "1.0.1"
+version = "1.0.2"
 
 /** This is from settings.gradle.kts. */
 val myArtifactId: String = rootProject.name
@@ -65,6 +34,39 @@ val myLicenseUrl = "http://www.apache.org/licenses/LICENSE-2.0.txt"
 
 val myDeveloperName = "Muhammad Faisal Amir"
 
+
+repositories {
+    google()
+    mavenCentral()
+    maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    maven { url = uri("https://jitpack.io") }
+}
+
+dependencies {
+    implementation(compose.desktop.currentOs)
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+tasks.withType<KotlinCompile>() {
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_11.toString()
+}
+
+compose.desktop {
+    application {
+        mainClass = "MainKt"
+        nativeDistributions {
+            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
+            packageName = myArtifactId
+            packageVersion = myArtifactVersion
+        }
+    }
+}
+
+
 val sourcesJar by tasks.creating(Jar::class) {
     archiveClassifier.set("sources")
     from(sourceSets.getByName("main").allSource)
@@ -80,7 +82,7 @@ val sourcesJar by tasks.creating(Jar::class) {
 publishing {
 
     publications {
-        register("release", MavenPublication::class) {
+        register("gprRelease", MavenPublication::class) {
             groupId = myArtifactGroup
             artifactId = myArtifactId
             version = myArtifactVersion
