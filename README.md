@@ -41,6 +41,16 @@ What's New??
     }
 
 
+## Screenshoot
+### Android Studio
+
+![ScreentShoot](docs/image/ss_android.png?raw=true)
+
+### Intellij IDEA
+
+![ScreentShoot](docs/image/ss_intellij.png?raw=true)
+
+
 ## Colaborator
 Very open to anyone, I'll write your name under this, please contribute by sending an email to me
 
