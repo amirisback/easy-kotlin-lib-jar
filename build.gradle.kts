@@ -13,7 +13,7 @@ plugins {
 group = "com.frogobox"
 
 /** Artifact version. Note that "SNAPSHOT" in the version is not supported by bintray. */
-version = "1.0.2"
+version = "1.0.3"
 
 /** This is from settings.gradle.kts. */
 val myArtifactId: String = rootProject.name
@@ -43,6 +43,7 @@ repositories {
 }
 
 dependencies {
+    implementation(kotlin("stdlib-jdk8"))
     implementation(compose.desktop.currentOs)
 }
 
@@ -120,9 +121,18 @@ publishing {
     }
 
     repositories {
+
         maven {
-            maven { url = uri("https://jitpack.io") }
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/${myGithubUsername}/${myArtifactId}")
+            credentials {
+                username = System.getenv("GITHUB_PACKAGES_USERID")
+                password = System.getenv("GITHUB_PACKAGES_PUBLISH_TOKEN")
+            }
         }
+
+        maven { url = uri("https://jitpack.io") }
+
     }
 
 }
