@@ -9,11 +9,11 @@ Repository for testing build from jitpack.io
 ## Version Release
 This Is Latest Release
 
-    $version_release = 1.0.4
+    $version_release = 1.0.5
 
 What's New??
 
-    * New Release *
+    * Available for buildSrc Kotlin DSL *
 
 ## Download this project
 
@@ -32,12 +32,12 @@ What's New??
 
 ### For build.gradle (Groovy)
     dependencies {
-        implementation 'com.github.amirisback:sample-kotlin-library:1.0.4'
+        implementation 'com.github.amirisback:sample-kotlin-library:1.0.5'
     }
 
 ### For build.gradle.kts (Kotlin DSL)
     dependencies {
-        implementation("com.github.amirisback:sample-kotlin-library:1.0.4")
+        implementation("com.github.amirisback:sample-kotlin-library:1.0.5")
     }
 
 

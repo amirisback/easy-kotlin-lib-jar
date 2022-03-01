@@ -1,9 +1,7 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
     java
     kotlin("jvm") version "1.5.21"
-    id("maven-publish")
+    `maven-publish`
 }
 
 repositories {
@@ -12,22 +10,9 @@ repositories {
     maven { url = uri("https://jitpack.io") }
 }
 
-dependencies {
-    implementation(kotlin("stdlib-jdk8"))
-}
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
-}
-
-tasks.withType<KotlinCompile>() {
-    kotlinOptions.jvmTarget = JavaVersion.VERSION_11.toString()
-}
-
 val VERSION_MAJOR = 1
 val VERSION_MINOR = 0
-val VERSION_PATCH = 4
+val VERSION_PATCH = 5
 
 group = "com.frogobox"
 version = "$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH"
