@@ -1,5 +1,5 @@
 ## easy-kotlin-lib-jar
-[![](https://jitpack.io/v/amirisback/sample-kotlin-library.svg?style=flat-square)](https://jitpack.io/#amirisback/sample-kotlin-library)
+[![](https://jitpack.io/v/amirisback/easy-kotlin-lib-jar.svg?style=flat-square)](https://jitpack.io/#amirisback/easy-kotlin-lib-jar)
 - Repository Sample For Native Kotlin Library <br>
 - License [Click Here](https://raw.githubusercontent.com/amirisback/easy-kotlin-lib-jar/master/LICENSE)
 - Privacy Policy [Click Here](https://raw.githubusercontent.com/amirisback/easy-kotlin-lib-jar/master/PRIVACY-POLICY.md)
