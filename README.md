@@ -1,6 +1,8 @@
-## sample-kotlin-library
-Repository Sample For Native Kotlin Library <br>
+## easy-kotlin-lib-jar
 [![](https://jitpack.io/v/amirisback/sample-kotlin-library.svg?style=flat-square)](https://jitpack.io/#amirisback/sample-kotlin-library)
+- Repository Sample For Native Kotlin Library <br>
+- License [Click Here](https://raw.githubusercontent.com/amirisback/easy-kotlin-lib-jar/master/LICENSE)
+- Privacy Policy [Click Here](https://raw.githubusercontent.com/amirisback/easy-kotlin-lib-jar/master/PRIVACY-POLICY.md)
 
 Repository for testing build from jitpack.io
 - Red : Failed
@@ -9,7 +11,7 @@ Repository for testing build from jitpack.io
 ## Version Release
 This Is Latest Release
 
-    $version_release = 1.0.5
+    $version_release = 1.0.6
 
 What's New??
 
@@ -32,12 +34,12 @@ What's New??
 
 ### For build.gradle (Groovy)
     dependencies {
-        implementation 'com.github.amirisback:sample-kotlin-library:1.0.5'
+        implementation 'com.github.amirisback:easy-kotlin-lib-jar:1.0.6'
     }
 
 ### For build.gradle.kts (Kotlin DSL)
     dependencies {
-        implementation("com.github.amirisback:sample-kotlin-library:1.0.5")
+        implementation("com.github.amirisback:easy-kotlin-lib-jar:1.0.6")
     }
 
 
