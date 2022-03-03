@@ -4,7 +4,7 @@ pluginManagement {
         gradlePluginPortal()
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
-    
 }
-rootProject.name = "sample-kotlin-library"
+
+rootProject.name = "easy-kotlin-lib-jar"
 
